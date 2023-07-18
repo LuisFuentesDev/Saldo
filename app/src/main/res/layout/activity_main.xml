@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etMonto"
+        android:id="@+id/twMonto"
         android:layout_width="305dp"
         android:layout_height="88dp"
         android:layout_marginTop="148dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toTopOf="@+id/twBienvenido" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
@@ -59,9 +59,9 @@
         android:layout_height="204dp"
         android:layout_marginTop="40dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/etMonto"
-        app:layout_constraintStart_toStartOf="@+id/etMonto"
-        app:layout_constraintTop_toBottomOf="@+id/etMonto">
+        app:layout_constraintEnd_toEndOf="@+id/twMonto"
+        app:layout_constraintStart_toStartOf="@+id/twMonto"
+        app:layout_constraintTop_toBottomOf="@+id/twMonto">
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -72,25 +72,29 @@
                 android:id="@+id/rbSaldo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver Saldo" />
+                android:text="Ver Saldo"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/rbIngresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingresar" />
+                android:text="Ingresar"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/rbRetirar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Retirar" />
+                android:text="Retirar"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/rbSalir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Salir" />
+                android:text="Salir"
+                android:textSize="16sp" />
 
         </RadioGroup>
     </androidx.cardview.widget.CardView>
