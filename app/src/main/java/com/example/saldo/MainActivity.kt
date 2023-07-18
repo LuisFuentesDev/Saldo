@@ -27,12 +27,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun retirarSaldo() {
-        saldo -= binding.twMonto.text.toString().toInt()
-        Toast.makeText(this, "Su saldo ha sido retirado correctamente", Toast.LENGTH_SHORT).show()
+        val monto = binding.twMonto.text.toString().toInt()
+        if (monto <= saldo) {
+            saldo = monto
+            limpiarMonto()
+            mostrarMensaje("El saldo ha sido retirado exitosamente")
+        } else {
+            mostrarMensaje("El monto supera el saldo inicial, intenta nuevamente")
+        }
+
+
     }
 
     fun ingresarSaldo() {
         saldo += binding.twMonto.text.toString().toInt()
-        Toast.makeText(this, "Su saldo ha sido ingresado correctamente", Toast.LENGTH_SHORT).show()
+        limpiarMonto()
+        mostrarMensaje("El monto se ha ingresado correctamente")
+    }
+
+    private fun limpiarMonto() {
+        binding.twMonto.text.clear()
+    }
+
+    fun mostrarMensaje(s:String) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }
 }
